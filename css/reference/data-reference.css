@@ -1,0 +1,45 @@
+body
+{
+	margin: 0px 5%;
+	color: #09f;
+}
+
+table 
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 90%;
+	border: 1px solid #09f;
+	margin: 0px 5%;
+}
+
+table tr:first-child
+{
+	background-color: #09f;
+	color: #333;
+	border-bottom: 1px solid #09f;
+}
+
+table td
+{
+	border-bottom: 1px solid #09f;
+}
+
+th, td 
+{
+	text-align: left;
+	padding: 8px;
+}
+
+h1, h2, h3
+{
+	color: #09f;
+}
+
+code
+{
+	display: block;
+	border: 1px solid #333;
+	padding: 1%;
+	margin-bottom: 3%;
+}
