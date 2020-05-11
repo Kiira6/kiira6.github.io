@@ -12,7 +12,7 @@ body
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0px;
 	background-color: #333;
-	overflow: none;
+	overflow: hidden;
 }
 
 a
@@ -105,12 +105,7 @@ aside
 #content
 {
 	width: 90%;
-}
-
-#content iframe
-{
-	overflow: hidden;
-}
+} 
 
 @media screen and (max-width: 780px) 
 {

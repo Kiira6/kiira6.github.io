@@ -2,6 +2,7 @@ body
 {
 	margin: 0px 5%;
 	color: #09f;
+	overflow: hidden;
 }
 
 table 
