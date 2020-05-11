@@ -1,0 +1,45 @@
+*
+{
+	box-sizing: border-box;
+	border: none;
+}
+
+html
+{
+	height: 100%;
+}
+
+body 
+{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	background-color: #333;
+	height: 100%;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.text-reversed
+{
+	display: inline-block;
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);	
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 780px) 
+{
+	
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 480px) 
+{
+	
+}
