@@ -73,7 +73,7 @@ header .navbar input
 	float: right;
 }
 
-header .navbar a:hover, header .navbar a:active, header .navbar a:visited
+header .navbar a:hover
 {
 	color: #09f;
 	background-color: #333;
