@@ -2,7 +2,28 @@ body
 {
 	margin: 0px 5%;
 	color: #09f;
-	overflow: hidden;
+	overflow-y: auto;
+	/* overflow-x: hidden; */
+}
+
+/* width */
+::-webkit-scrollbar 
+{
+	width: 10px;
+	height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track 
+{
+	background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+{
+	background: #09f;
+	border-radius: 5px;
 }
 
 table 
