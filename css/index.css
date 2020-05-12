@@ -5,15 +5,15 @@
 	/* margin: 0px; */
 /* } */
 
-/* body  */
-/* { */
-	/* width: 100%; */
+body 
+{
+	width: 80%;
 	/* height: 100vh; */
 	/* font-family: Arial, Helvetica, sans-serif; */
-	/* margin: 0px; */
+	margin: 0px 10%;
 	/* background-color: #333; */
 	/* overflow: hidden; */
-/* } */
+}
 
 /* a */
 /* { */
@@ -53,6 +53,7 @@ header .navbar
 	height: 25%;
 	background-color: #09f;
 	padding: 0px 0px 0px 15%;
+	border-radius: 20px 0px 0px 0px;
 }
 
 header .navbar a, header .navbar input
