@@ -37,15 +37,11 @@ table
 	/* margin: 0px 15%; */
 }
 
-table tr:first-child
+tr:first-child
 {
 	background-color: #09f;
 	color: #333;
 	border-bottom: 1px solid #09f;
-}
-
-table td
-{
 }
 
 th, td 
@@ -63,7 +59,7 @@ h1, h2, h3
 code
 {
 	display: block;
-	border: 1px solid #333;
+	/* border: 1px solid #333; */
 	padding: 1%;
 	margin-bottom: 3%;
 }
