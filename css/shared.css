@@ -16,6 +16,11 @@ body
 	overflow: hidden;
 }
 
+h1, h2, h3, h4, h5
+{
+	color: 09f;
+}
+
 a
 {
 	text-decoration: none;
@@ -30,4 +35,19 @@ a
 	-o-transform: scale(-1, 1);
 	-ms-transform: scale(-1, 1);
 	transform: scale(-1, 1);	
+}
+
+.right
+{
+	float: right;
+}
+
+.left
+{
+	float: left;
+}
+
+.clear
+{
+	clear: both;
 }

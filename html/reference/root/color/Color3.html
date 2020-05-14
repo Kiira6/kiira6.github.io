@@ -5,91 +5,210 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../../../../css/reference/data-reference.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="../../../../js/jquery.js"></script>
+		<script src="../../../../js/reference/data-reference.js"></script>
 	</head>
 	<body>
-		<h1>Color 3</h1>
-		<p>Estructura de color de 3 canales (R, G, B)</p>
+		<div id="description">
+			<h1>Color 3</h1>
+			<p>Estructura de color de 3 canales (R, G, B)</p>
+		</div>
 		
-		<h3>Variables</h3>
-		<div style="overflow-x:auto;">
-			<table>
+		<div id="variables">
+			<h3>Variables</h3>
+			<div style="overflow-x:auto;">
+				<table>
+					<tr>
+						<th>Tipo</th>
+						<th>Nombre</th>
+						<th>Descripcion</th>
+					</tr>
+					<tr>
+						<td>unsigned char</td>
+						<td>r</td>
+						<td>Canal rojo</td>
+					</tr>
+					<tr>
+						<td>unsigned char</td>
+						<td>g</td>
+						<td>Canal verde</td>
+					</tr>
+					<tr>
+						<td>unsigned char</td>
+						<td>b</td>
+						<td>Canal azul</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="functions">
+			<h3>Funciones</h3>
+			<div style="overflow-x:auto;">
+				<table>
+					<tr>
+						<th>Tipo Devuelto</th>
+						<th>Prototipo</th>
+						<th>Descripcion</th>
+					</tr>
+					<tr>
+						<td>Color3</td>
+						<td>__create_Color3 (unsigned char r, unsigned char g, unsigned char b)</td>
+						<td>Crea un color con los parámetros r, g y b</td>
+					</tr>
+					<tr>
+						<td>Color3</td>
+						<td>__create_Color3 (int color)</td>
+						<td>Crea un color mediante el parámetro de indice de colores integrados</td>
+					</tr>
+					<tr>
+						<td>unsigned char</td>
+						<td>GetRed (Color3 color)</td>
+						<td>Obtiene el canal rojo</td>
+					</tr>
+					<tr>
+						<td>void</td>
+						<td>SetRed (Color3 color, unsigned char r)</td>
+						<td>Establece el canal rojo</td>
+					</tr>
+					<tr>
+						<td>unsigned char</td>
+						<td>GetGreen (Color3 color)</td>
+						<td>Obtiene el canal verde</td>
+					</tr>
+					<tr>
+						<td>void</td>
+						<td>SetGreen (Color3 color, unsigned char g)</td>
+						<td>Establece el canal verde</td>
+					</tr>
+					<tr>
+						<td>unsigned char</td>
+						<td>GetBlue (Color3 color)</td>
+						<td>Obtiene el canal azul</td>
+					</tr>
+					<tr>
+						<td>void</td>
+						<td>SetBlue (Color3 color, unsigned char b)</td>
+						<td>Establece el canal azul</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div id="detail">
+			<h3>Descripción Detallada</h3>
+			<p>Estructura de color de tres canales.</p>
+			<p>Contiene tres valores (R, G y B) y su valor puede oscilar entre 0 y 255, ambos incluidos.</p>
+		</div>
+		
+		<div id="examples">
+			<h3>Ejemplos</h3>
+			<table class="example">
 				<tr>
-					<th>Tipo</th>
-					<th>Nombre</th>
-					<th>Descripcion</th>
+					<th><h4>exampleModule.cc</h4><h4 class="fa fa-clipboard right"></h4></th>
 				</tr>
 				<tr>
-					<td>unsigned char</td>
-					<td>r</td>
-					<td>Canal rojo</td>
+					<td>
+						<code>
+							#include "./Lucifer/common/lucifer.cc"<br>
+							<br>
+							Lucifer::Color3 color;<br>
+							<br>
+							void ExampleStart()<br>
+							{<br>
+							&emsp;&emsp;color = Lucifer::COLORS3[Lucifer::LUCIFER_BLUE];<br>
+							}
+						</code>
+					</td>
+				</tr>
+			</table>
+			<table class="example">
+				<tr>
+					<th><h4>exampleModule.cc</h4><h4 class="fa fa-clipboard right"></h4></th>
 				</tr>
 				<tr>
-					<td>unsigned char</td>
-					<td>g</td>
-					<td>Canal verde</td>
+					<td>
+						<code>
+							#include "./Lucifer/common/lucifer.cc"<br>
+							<br>
+							Lucifer::Color3 color;<br>
+							<br>
+							void ExampleStart()<br>
+							{<br>
+							&emsp;&emsp;color = {0, 128, 255};<br>
+							}
+						</code>
+					</td>
+				</tr>
+			</table>
+			<table class="example">
+				<tr>
+					<th><h4>exampleModule.cc</h4><h4 class="fa fa-clipboard right"></h4></th>
 				</tr>
 				<tr>
-					<td>unsigned char</td>
-					<td>b</td>
-					<td>Canal azul</td>
+					<td>
+						<code>
+							#include "./Lucifer/common/lucifer.cc"<br>
+							<br>
+							Lucifer::Color3 color;<br>
+							<br>
+							void ExampleStart()<br>
+							{<br>
+							&emsp;&emsp;color.r = 0;<br>
+							&emsp;&emsp;color.g = 128;<br>
+							&emsp;&emsp;color.b = 255;<br>
+							}
+						</code>
+					</td>
 				</tr>
 			</table>
 		</div>
-		
-		<h3>Descripcion Detallada</h3>
-		<p>Estructura de color de cuatro canales.</p>
-		<p>Contiene tres valores (R, G y B) y su valor puede oscilar entre 0 y 255, ambos incluidos.</p>
-		
-		<h3>Ejemplos</h3>
-		<h5>exampleModule.cc</h5>
-		<code><pre>
-#include "./Lucifer/common/lucifer.cc"
-#include "./exampleModule.cc"
- 
-...
-Lucifer::Color3 color;
- 
-void ExampleStart()
-{
-    color = Lucifer::COLORS3[Lucifer::LUCIFER_BLUE];
-}
- 
-...
-		</pre></code>
-		<h5>exampleModule.cc</h5>
-		<code><pre>
-#include "./Lucifer/common/lucifer.cc"
-#include "./exampleModule.cc"
- 
-...
- 
-Lucifer::Color3 color;
- 
-void ExampleStart()
-{
-    color = {0, 128, 255};
-}
- 
-...
-		</pre></code>
-		<h5>exampleModule.cc</h5>
-		<code><pre>
-#include "./Lucifer/common/lucifer.cc"
-#include "./exampleModule.cc"
- 
-...
- 
-Lucifer::Color3 color;
- 
-void ExampleStart()
-{
-    color.r = 0;
-    color.g = 128;
-    color.b = 255;
-}
- 
-...
-		</pre></code>
-		<h3>Enlaces de interés</h3>
+		<div id="links">
+			<h3>Enlaces de interés</h3>
+			<a class="seeAlso" href="../core/GameModule.html">GameModule</a>
+		</div>
+		<div id="tech-data">
+			<h3>Datos técnicos</h3>
+			<table class="tdata">
+				<tr>
+					<th>Versión</th>
+				</tr>
+				<tr>
+					<td>0.0</td>
+				</tr>
+			</table>
+			<table class="tdata">
+				<tr>
+					<th>Última actualización</th>
+				</tr>
+				<tr>
+					<td>04/04/2020</td>
+				</tr>
+			</table>
+			<table class="tdata">
+				<tr>
+					<th>Autor</th>
+				</tr>
+				<tr>
+					<td>Víctor Joaquín Ruipérez Oya</td>
+				</tr>
+			</table>
+		</div>
+		<div id="rating">
+			<table id="rate">
+				<tr>
+					<th>Valora esta página</th>
+				</tr>
+				<tr>
+					<td id="rating-stars">
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
