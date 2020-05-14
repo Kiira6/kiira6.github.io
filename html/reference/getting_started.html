@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Lucifer Scripting Reference</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../../css/reference/data-reference.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="../../js/jquery.js"></script>
+		<script src="../../js/shared.js"></script>
+		<script src="../../js/reference/data-reference.js"></script>
+	</head>
+	<body>
+		<div id="description">
+			<h1>Empezar a utilizar Lucif<span class="text-reversed">e</span>r</h1>
+			<p>Para empezar a utilizar lucifer deberemos importarlo e inicializarlo.</p>
+			<table class="example">
+				<tr>
+					<th><h4>main.cc</h4><h4 class="fa fa-clipboard right"></h4></th>
+				</tr>
+				<tr>
+					<td>
+						<code>
+							#include "./deps/Lucifer/src/core/lucifer.cc"<br>
+							<br>
+							int main(int argc, char **argv) <br>
+							{<br>
+							&emsp;&emsp;Lucifer::InitGame();<br>
+							<br>
+							&emsp;&emsp;return 0;<br>
+							}
+						</code>
+					</td>
+				</tr>
+			</table>
+			<p>Una vez compilado lo ejecutamos y obtendremos la siguiente salida por consola</p>
+			<img src="../../images/reference/basic-console-output.png" alt="Salida básica por consola" />
+			
+			<p>Ahora podemos crear nuestro primer módulo de prueba</p>
+			<table class="example">
+				<tr>
+					<th><h4>exampleModule.cc</h4><h4 class="fa fa-clipboard right"></h4></th>
+				</tr>
+				<tr>
+					<td>
+						<code>
+							void exampleAwake()<br>
+							{<br>
+							&emsp;&emsp;printf("Awake");<br>
+							}<br>
+							<br>
+							void exampleStart()<br>
+							{<br>
+							&emsp;&emsp;printf("Start");<br>
+							}<br>
+							<br>
+							void exampleUpdate()<br>
+							{<br>
+							&emsp;&emsp;printf("Update");<br>
+							}<br>
+							<br>
+							void exampleDestroy()<br>
+							{<br>
+							&emsp;&emsp;printf("Destroy");<br>
+							}<br>
+							<br>
+							Lucifer::GameModule example_Module =<br>
+							{<br>
+							&emsp;&emsp;&exampleAwake, &exampleStart, &exampleUpdate, &exampleDestroy<br>
+							};<br>
+						</code>
+					</td>
+				</tr>
+			</table>
+			<p>Y debemos añadir el fichero y cargar el modulo</p>
+			<table class="example">
+				<tr>
+					<th><h4>main.cc</h4><h4 class="fa fa-clipboard right"></h4></th>
+				</tr>
+				<tr>
+					<td>
+						<code>
+							#include "./deps/Lucifer/src/core/lucifer.cc"<br>
+							#include "./exampleModule.cc"<br>
+							<br>
+							void Lucifer::LoadModules()<br>
+							{<br>
+							&emsp;&emsp;AddModule(&example_Module);<br>
+							}<br>
+							<br>
+							int main(int argc, char **argv) <br>
+							{<br>
+							&emsp;&emsp;Lucifer::InitGame();<br>
+							<br>
+							&emsp;&emsp;return 0;<br>
+							}
+						</code>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="modal_frame" class="modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="modal_img">
+		</div>
+	</body>
+</html>
