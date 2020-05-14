@@ -1,0 +1,42 @@
+body
+{
+	margin: 0px 5%;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-y: auto;
+	width: 80%;
+	text-align: justify;
+	overflow-x: hidden;
+	margin: auto;
+}
+
+h2, h3
+{
+	color: #09f;
+}
+
+a
+{
+	color: #09f;
+	text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar 
+{
+	width: 10px;
+	height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track 
+{
+	background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+{
+	background: #09f;
+	border-radius: 5px;
+}
