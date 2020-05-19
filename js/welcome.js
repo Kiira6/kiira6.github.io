@@ -1,7 +1,9 @@
 $(document).ready(function()
 {
 	var slideIndex = 0;
-	var interval = window.setInterval(showSlides, 5000);
+	// var interval = window.setInterval(showSlides, 5000);
+	var slides = $(".slide");
+	var dots = $(".dot");
 	
 	$(".slide").each(function(index)
 	{
@@ -12,14 +14,22 @@ $(document).ready(function()
 	
 	$(".prev").click(function()
 	{
-		
+		debugger
+		slideIndex--;
+		if (slideIndex < 0)
+		{
+			slideIndex = slides.length - 1;
+		}
+		showSlides();
+		// clearInterval(interval);
+		// interval = window.setInterval(showSlides, 5000);
 	});
 	
 	$(".next").click(function()
 	{
 		showSlides();
-		clearInterval(interval);
-		interval = window.setInterval(showSlides, 5000);
+		// clearInterval(interval);
+		// interval = window.setInterval(showSlides, 5000);
 	});
 	
 	$(".dot").click(function()
@@ -32,13 +42,12 @@ $(document).ready(function()
 	
 	function showSlides() 
 	{
-		var slides = $(".slide");
-		var dots = $(".dot");
+		debugger
 		slides.hide();
 		slides[slideIndex].style.display = "block";
 		dots.removeClass("active");
 		$(dots[slideIndex]).addClass("active");
-		slideIndex++;
-		slideIndex %= slides.length;
+		// slideIndex++;
+		// slideIndex %= slides.length;
 	}
 });

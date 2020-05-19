@@ -1,11 +1,7 @@
 body 
 {
 	width: 80%;
-	/* height: 100vh; */
-	/* font-family: Arial, Helvetica, sans-serif; */
 	margin: 0px 10%;
-	/* background-color: #333; */
-	/* overflow: hidden; */
 }
 
 header, footer, section
@@ -48,7 +44,7 @@ header .navbar a, header .navbar input
 {
 	color: #333;
 	float: left;
-	width: 10%;
+	width: 12.5%;
 	height: 100%;
 	padding-top: 1%;
 	transition: 0.4s;
@@ -75,9 +71,9 @@ header .navbar a:hover, header .navbar a.active
 	color: #09f;
 	background-color: #333;
 	float: left;
-	width: 10%;
-	height: 100%;
-	padding-top: 1%;
+	/* width: 10%; */
+	/* height: 100%; */
+	/* padding-top: 1%; */
 }
 
 footer
@@ -86,9 +82,9 @@ footer
 	text-align: center;
 	font-size: 8px;
 	color: #333;
-	padding-top: 1%;
+	padding: 1% 0px 5% 0px;
 	background-color: #09f;
-	border-radius: 0px 0px 20px 20px
+	border-radius: 20px 20px 0px 0px
 }
 
 footer h2
