@@ -95,7 +95,7 @@ input[type=button]
 	/* border: 1px solid #333; */
 /* } */
 
-input[type=button]:hover
+input[type=button]:hover, input[type=button].active
 {
 	background-color: #f90;
 	color: #333;

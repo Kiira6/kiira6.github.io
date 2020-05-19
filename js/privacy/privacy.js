@@ -4,5 +4,6 @@ $(document).ready(function()
 	$("#privacy_button").click(function()
 	{
 		$("#privacy").toggle();
+		$("#privacy_button").toggleClass("active");
 	});
 });
