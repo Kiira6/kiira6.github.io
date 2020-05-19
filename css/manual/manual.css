@@ -39,3 +39,22 @@ body
 	background: #09f;
 	border-radius: 5px;
 }
+
+#mobile-manual
+{
+	display: none;
+}
+
+@media screen and (max-width: 768px) 
+{
+	#mobile_manual
+	{
+		display: block;
+		margin-top: 30px;
+	}
+	
+	#pdf_viewer
+	{
+		display: none;
+	}
+}

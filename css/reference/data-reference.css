@@ -122,3 +122,12 @@ img
 	border: 3px solid #09f;
 	display: block;
 }
+
+@media screen and (max-width: 768px) 
+{
+	img
+	{
+		overflow: auto;
+		width: 90%;
+	}
+}

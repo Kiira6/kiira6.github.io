@@ -44,9 +44,10 @@ header .navbar a, header .navbar input
 {
 	color: #333;
 	float: left;
-	width: 12.5%;
+	min-width: 12.5%;
+	width: auto;
 	height: 100%;
-	padding-top: 1%;
+	padding: 1% 20px;
 	transition: 0.4s;
 }
 
@@ -108,4 +109,92 @@ section iframe
 {
 	background-color: #333;
 	width: 100%;
+}
+
+@media screen and (max-width: 768px) 
+{
+	body
+	{
+		width: 100%;
+		margin: 0px;
+	}
+}
+
+@media screen and (max-width: 568px) 
+{
+	body
+	{
+		overflow: auto;
+	}
+	
+	header
+	{
+		color: #09f;
+		text-align: center;
+		/* height: 75%; */
+		height: auto;
+	}
+	
+	header .title
+	{
+		height: auto;
+		/* border-radius: 0px; */
+		padding: 5%;
+		/* margin-top: 20px; */
+	}
+	
+	header .navbar
+	{
+		height: auto;
+		border-radius: 0px;
+		padding: 0px;
+	}
+	
+	header .navbar a, header .navbar input
+	{
+		height: 50px;
+		width: 100%;
+		float: none;
+		display: block;
+		padding: 2% 0px;
+		border-radius: 0px;
+	}
+	
+	header .navbar a:hover, header .navbar a.active
+	{
+		color: #09f;
+		background-color: #333;
+		float: none;
+	}
+	
+	header .navbar input:hover
+	{
+		float: none;
+		width: 100%;
+		padding: 2% 0px;
+	}
+	
+	section
+	{
+		height: 100%;
+		margin: 0px;
+	}
+	
+	footer
+	{
+		height: auto;
+		text-align: center;
+		font-size: 8px;
+		color: #333;
+		/* padding: 1% 0px 5% 0px; */
+		background-color: #09f;
+		border-radius: 0px
+	}
+	
+	footer h2
+	{
+		float: none !important;
+		display: block;
+		padding: 10px 0px 0px 0px;
+	}
 }

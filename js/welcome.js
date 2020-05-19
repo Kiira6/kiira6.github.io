@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
 	var slideIndex = 0;
-	// var interval = window.setInterval(showSlides, 5000);
+	var interval = window.setInterval(nextSlide, 5000);
 	var slides = $(".slide");
 	var dots = $(".dot");
 	
@@ -14,22 +14,16 @@ $(document).ready(function()
 	
 	$(".prev").click(function()
 	{
-		debugger
-		slideIndex--;
-		if (slideIndex < 0)
-		{
-			slideIndex = slides.length - 1;
-		}
-		showSlides();
-		// clearInterval(interval);
-		// interval = window.setInterval(showSlides, 5000);
+		prevSlide();
+		clearInterval(interval);
+		interval = window.setInterval(nextSlide, 5000);
 	});
 	
 	$(".next").click(function()
 	{
-		showSlides();
-		// clearInterval(interval);
-		// interval = window.setInterval(showSlides, 5000);
+		nextSlide();
+		clearInterval(interval);
+		interval = window.setInterval(nextSlide, 5000);
 	});
 	
 	$(".dot").click(function()
@@ -37,17 +31,28 @@ $(document).ready(function()
 		slideIndex = $(".dot").index(this);
 		showSlides(slideIndex);
 		clearInterval(interval);
-		interval = window.setInterval(showSlides, 5000);
+		interval = window.setInterval(nextSlide, 5000);
 	});
+	
+	function prevSlide()
+	{
+		slideIndex++;
+		slideIndex %= slides.length;
+		showSlides();
+	}
+	
+	function nextSlide()
+	{
+		slideIndex++;
+		slideIndex %= slides.length;
+		showSlides();
+	}
 	
 	function showSlides() 
 	{
-		debugger
 		slides.hide();
 		slides[slideIndex].style.display = "block";
 		dots.removeClass("active");
 		$(dots[slideIndex]).addClass("active");
-		// slideIndex++;
-		// slideIndex %= slides.length;
 	}
 });
