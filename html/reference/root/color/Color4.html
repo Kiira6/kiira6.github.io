@@ -5,10 +5,15 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../../../../css/reference/data-reference.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="../../../../js/jquery.js"></script>
+		<script src="../../../../js/reference/data-reference.js"></script>
 	</head>
 	<body>
-		<h1>Color 4</h1>
-		<p>Estructura de color de 4 canales (R, G, B, A)</p>
+		<div id="description">
+			<h1>Color 4</h1>
+			<p>Estructura de color de 4 canales (R, G, B, A)</p>
+		</div>
 		
 		<h3>Variables</h3>
 		<div style="overflow-x:auto;">
@@ -40,62 +45,60 @@
 				</tr>
 			</table>
 		</div>
+		<div id="functions">
+			<h3>Funciones</h3>
+			<div style="overflow-x:auto;">
+				<table>
+					<tr>
+						<th>Tipo Devuelto</th>
+						<th>Prototipo</th>
+						<th>Descripción</th>
+					</tr>
+				</table>
+			</div>
+		</div>
 		
-		<h3>Descripcion Detallada</h3>
-		<p>Estructura de color de cuatro canales.</p>
-		<p>Contiene tres valores (R, G, B y A) y su valor puede oscilar entre 0 y 255, ambos incluidos.</p>
+		<div id="detail">
+			<h3>Descripción Detallada</h3>
+		</div>
 		
-		<h3>Ejemplos</h3>
-		<h5>exampleModule.cc</h5>
-		<code><pre>
-#include "./Lucifer/common/lucifer.cc"
-#include "./exampleModule.cc"
- 
-...
-Lucifer::Color4 color;
- 
-void ExampleStart()
-{
-	color = Lucifer::COLORS4[Lucifer::LUCIFER_BLUE];
-}
- 
-...
-		</pre></code>
-		<h5>exampleModule.cc</h5>
-		<code><pre>
-#include "./Lucifer/common/lucifer.cc"
-#include "./exampleModule.cc"
- 
-...
- 
-Lucifer::Color4 color;
- 
-void ExampleStart()
-{
-    color = {0, 128, 255, 255};
-}
- 
-...
-		</pre></code>
-		<h5>exampleModule.cc</h5>
-		<code><pre>
-#include "./Lucifer/common/lucifer.cc"
-#include "./exampleModule.cc"
- 
-...
- 
-Lucifer::Color4 color;
- 
-void ExampleStart()
-{
-    color.r = 0;
-    color.g = 128;
-    color.b = 255;
-    color.a = 255;
-}
- 
-...
-		</pre></code>
-		<h3>Enlaces de interés</h3>
+		<div id="examples">
+			<h3>Ejemplos</h3>
+		</div>
+		<div id="links">
+			<h3>Enlaces de interés</h3>
+			
+		</div>
+		<div id="tech-data">
+			<h3>Información</h3>
+			<table class="tdata">
+				<tr>
+					<th>Versión</th>
+					<th>Última actualización</th>
+					<th>Autor</th>
+				</tr>
+				<tr>
+					<td>0.0</td>
+					<td>04/04/2020</td>
+					<td>Víctor Joaquín Ruipérez Oya</td>
+				</tr>
+			</table>
+		</div>
+		<div id="rating">
+			<table id="rate">
+				<tr>
+					<th>Valora esta página</th>
+				</tr>
+				<tr>
+					<td id="rating-stars">
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>

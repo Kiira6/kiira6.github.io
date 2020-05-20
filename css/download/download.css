@@ -9,6 +9,7 @@ body
 	overflow-x: hidden;
 	margin: auto;
 	font-size: 10px;
+	background-color: #333;
 }
 
 h1, h2, h3

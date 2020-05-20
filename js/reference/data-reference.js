@@ -48,17 +48,4 @@ $(document).ready(function()
 		document.execCommand("copy");
 		document.body.removeChild(aux);
 	});
-	
-	// $("img").click(function()
-	// {
-		// var modal = $(".modal");
-		// var modal_img = $(".modal-content");
-		// document.getElementById("modal_frame").style.display = "block";
-		// document.getElementById("modal_img").src = this.src;
-	// });
-	
-	// $(".close").click(function()
-	// {
-		// document.getElementById("modal_frame").style.display = "none";
-	// });
 });
